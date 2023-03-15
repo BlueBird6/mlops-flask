@@ -11,6 +11,9 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy the application files
 COPY . .
 
+# Run model.py to train the model and save it to disk
+RUN python3 model.py
+
 # Expose the port that the application will listen on
 EXPOSE 5000
 
