@@ -15,5 +15,5 @@ jobs:
       run: docker build -t myflaskapp .
 
     - name: Push the Docker image to GitHub Packages
-      run: echo ${{ secrets.GITHUB_TOKEN }} | docker login ghcr.io -u ${{ github.actor }} --password-stdin && docker tag myflaskapp:latest ghcr.io/BlueBird6/mlopsflask/myflaskapp:latest
+      run: echo ${{ secrets.GITHUB_TOKEN }} | docker login ghcr.io -u ${{ github.actor }} --password-stdin && docker tag myflaskapp:latest ghcr.io/BlueBird6/mlopsflask/myflaskapp:latest && docker push ghcr.io/BlueBird6/mlopsflask/myflaskapp:latest
 
