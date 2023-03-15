@@ -15,5 +15,5 @@ jobs:
       run: docker build -t mlops-flask .
 
     - name: Push the Docker image to GitHub Packages
-      run: echo ${{ secrets.GITHUB_TOKEN }} | docker login ghcr.io -u ${{ github.actor }} --password-stdin && docker tag mlops-flask:latest ghcr.io/BlueBird6/mlops-flask/mlops-flask:latest && docker push ghcr.io/BlueBird6/mlops-flask/mlops-flask:latest
+      run: echo ${{ secrets.GITHUB_TOKEN }} | docker login ghcr.io -u ${{ github.actor }} --password-stdin && docker tag mlops-flask:latest ghcr.io/bluebird6/mlops-flask/mlops-flask:latest && docker push ghcr.io/bluebird6/mlops-flask/mlops-flask:latest
 
